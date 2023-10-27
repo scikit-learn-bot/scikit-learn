@@ -1,6 +1,9 @@
 name: Fork scikit-learn
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - scikit-learn-bot-fork-action
 
 jobs:
   fork:
