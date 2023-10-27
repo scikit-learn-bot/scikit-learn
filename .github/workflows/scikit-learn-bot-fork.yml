@@ -1,0 +1,11 @@
+name: Fork scikit-learn
+on:
+  workflow_dispatch:
+
+jobs:
+  fork:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh repo fork scikit-learn/scikit-learn
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
